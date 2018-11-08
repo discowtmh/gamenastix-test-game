@@ -1,5 +1,7 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class Swap_Ctrl : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class Swap_Ctrl : MonoBehaviour
 	public GameObject gameobject_instance;
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(Swap_Ctrl))]
 public class Swap_Ctrl_CustomEditor : Editor
 {
@@ -58,3 +61,4 @@ public class Swap_Ctrl_CustomEditor : Editor
 		}
 	}
 }
+#endif

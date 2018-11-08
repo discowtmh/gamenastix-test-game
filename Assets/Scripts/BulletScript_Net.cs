@@ -38,7 +38,7 @@ public class BulletScript_Net : MonoBehaviour
 			{
 				isHitEnabled = false;
 
-					//collision.collider.GetComponentInParent<Enemy_Net>().GetHit(20, collision.gameObject.name.Contains("head"));
+				collision.collider.GetComponentInParent<Enemy>().GetHit(20, collision.gameObject.name.Contains("head"));
 
 				ContactPoint contact = collision.contacts[0];
 				Vector3 pos = contact.point;
